@@ -63,15 +63,30 @@ def get_largest_prime_below(n):
 
     return (maxprim)
 def test_get_largest_prime_below():
-    n = 15
-    print(get_largest_prime_below(n))
+    assert get_largest_prime_below(15) == 5
+    assert get_largest_prime_below(6) == 3
+
 
 def main():
 
-    # interfata de tip consola aici
+    while True:
+        print("Optiuni: ")
+        print("1. Găsește ultimul număr prim mai mic decât un număr dat")
+        print("4. terminarea programului")
+        option = input("scrie nr. optiuni: ")
+        if option == 1:
+            n = input("introdu numarul")
+            get_largest_prime_below(n)
+        if option == 4:
+            break
 
-    if __name__ == '__main__':
-        main()
+
+
+if __name__ == '__main__':
+    test_get_largest_prime_below()
+
+    main()
+
 
 
 
