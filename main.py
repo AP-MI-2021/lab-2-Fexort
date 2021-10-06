@@ -65,6 +65,15 @@ def get_largest_prime_below(n):
 def test_get_largest_prime_below():
     assert get_largest_prime_below(15) == 5
     assert get_largest_prime_below(6) == 3
+    assert get_largest_prime_below(21) == 7
+def test_get_base_2():
+    assert get_base_2(2) == 10
+    assert get_base_2(8) == 100
+    assert get_base_2(16) == 1000
+def test_is_antipalindrome():
+    assert is_antipalindrome(2345) == True
+    assert is_antipalindrome(2334) == False
+    assert is_antipalindrome(17587) == True
 
 
 def main():
@@ -72,11 +81,19 @@ def main():
     while True:
         print("Optiuni: ")
         print("1. Găsește ultimul număr prim mai mic decât un număr dat")
-        print("4. terminarea programului")
+        print("2. Din baza 10 in baza 2")
+        print("3. Verifica daca numarul este antiplaindrom")
+        print("4. Terminarea programului")
         option = input("scrie nr. optiuni: ")
         if option == 1:
             n = input("introdu numarul")
             get_largest_prime_below(n)
+        if option == 2:
+            n = input("introdu numarul")
+            get_base_2(n)
+        if option == 3:
+            n = input("introdu numarul")
+            is_antipalindrome(n)
         if option == 4:
             break
 
@@ -84,6 +101,8 @@ def main():
 
 if __name__ == '__main__':
     test_get_largest_prime_below()
+    test_get_base_2()
+    test_is_antipalindrome()
 
     main()
 
